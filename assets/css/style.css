@@ -1,3 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "slick";
+  text-decoration: none;
+  color: black;
+  overflow-x: hidden;
+}
 
+header {
+  height: 100px;
+  width: 100%;
+  background-color: white;
+  position: relative;
+}
+header .navbar {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+header .navbar div {
+  text-align: center;
+  padding: 40px 20px 40px 20px;
+  text-decoration: none;
+  font-size: 14px;
+  border: #cacaca 1px solid;
+}
+header .navbar div:hover {
+  background-color: #a8050e;
+  border-color: #a8050e;
+  color: white;
+  cursor: pointer;
+}
+header .navbar .active {
+  background-color: #a8050e;
+  border-color: #a8050e;
+  color: white;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top, #22b2eb, #df8005);
+}
 
 /*# sourceMappingURL=style.css.map */
