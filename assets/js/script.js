@@ -4,14 +4,15 @@ const btn_add=document.querySelector('.btn_add')
 
 
 
-todoList.addEventListener('click',del)
-const todo=document.querySelector('.todo')
+// todoList.addEventListener('click',createEventDel)
 
+// function createEventDel(){
+//     const btn_del=document.querySelector('.del_task');
 
+//     btn_del.addEventListener('click',function(e){
 
-
-
-
+//     })
+// }
 
 btn_add.addEventListener('click',(e)=>{
     if (task.value==''){
@@ -33,28 +34,22 @@ btn_add.addEventListener('click',(e)=>{
     del_task.className='del_task';
     del_task.textContent='X';
 
+    del_task.addEventListener("click",(e)=>{
+        console.log(this)
+    })
+
     const val_task=document.createElement('div');
     val_task.className='val_task';
     val_task.textContent='V';
-
-    listContainer.parentNode.insertBefore(todo,todoList.nextSibling);
+    todoList.appendChild(todo);
     todo.appendChild(todoTask);
     todo.appendChild(btn_task);
     btn_task.appendChild(val_task);
     btn_task.appendChild(del_task);
-    task.value='';
+    // task.value='';
     }  
 });
-function del(){
-    console.log('yop')
-    if (item.classList[0]=== 'del_task'){
-        console.log('yo')
-    }
-    
 
-
-
-}
 
 
 
