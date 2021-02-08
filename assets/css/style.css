@@ -41,7 +41,116 @@ header .navbar .active {
 body {
   width: 100vw;
   height: 100vh;
-  background: linear-gradient(to top, #22b2eb, #df8005);
+  background: linear-gradient(to left, #eb22e1, #dfdb05b9, #eb22e1);
+}
+
+.todoList {
+  margin-top: 5%;
+  width: 60%;
+  height: 50vh;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 0.438);
+  border-radius: 20px;
+}
+.todoList h1 {
+  text-align: center;
+  font-size: 3em;
+  margin-bottom: 2%;
+}
+.todoList .div_Task {
+  text-align: center;
+}
+.todoList .div_Task input {
+  height: 50px;
+  width: 60%;
+  font-size: 2em;
+}
+.todoList .btn {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+}
+.todoList .btn .btn_add {
+  width: 15%;
+  height: 30px;
+  background-color: #24ff24;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 20px;
+  border: 1px #24ff24 solid;
+}
+.todoList .btn .btn_add:hover {
+  background-color: rgba(36, 255, 36, 0.678);
+  border-color: black;
+  cursor: pointer;
+}
+.todoList .btn .btn_del {
+  width: 15%;
+  height: 30px;
+  background-color: #ce1919;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  border-radius: 20px;
+  border: 1px #eb0808 solid;
+}
+.todoList .btn .btn_del:hover {
+  background-color: rgba(206, 25, 25, 0.596);
+  border-color: black;
+  cursor: pointer;
+}
+.todoList .todo {
+  list-style: none;
+  width: 60%;
+  height: 50px;
+  margin: 5px auto;
+  align-items: center;
+  justify-content: space-around;
+  display: flex;
+  font-size: 2em;
+  background: linear-gradient(to left, #00e0fd, #15ff00);
+  border-radius: 20px;
+}
+.todoList .btn_task {
+  display: flex;
+  justify-content: center;
+}
+.todoList .del_task {
+  background-color: red;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  margin-left: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  border: red 1px solid;
+}
+.todoList .del_task:hover {
+  color: red;
+  background-color: white;
+  cursor: pointer;
+}
+.todoList .val_task {
+  background-color: green;
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  color: white;
+  display: flex;
+  justify-content: center;
+  border: green 1px solid;
+}
+.todoList .val_task:hover {
+  color: green;
+  background-color: white;
+  cursor: pointer;
 }
 
 /*# sourceMappingURL=style.css.map */

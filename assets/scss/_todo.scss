@@ -1,0 +1,113 @@
+.todoList{
+    margin-top: 5%;
+    width:60%;
+    height:50vh;
+    @include center;
+    background-color: rgba(255, 255, 255, 0.438);
+    border-radius:20px;
+    h1{
+        text-align:center;       
+         font-size: 3em;
+         margin-bottom: 2%;
+
+
+    }
+    .div_Task{
+        text-align:center;
+            input{
+            height: 50px;
+            width: 60%;
+            font-size: 2em;
+
+        }
+    }
+    .btn{
+        text-align:center;
+        display: flex;
+        justify-content:center;
+        padding:20px;
+
+        .btn_add{
+            width: 15%;
+            height: 30px;
+            background-color:rgb(36, 255, 36);
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            margin:10px;
+            border-radius:20px;
+            border: 1px rgb(36, 255, 36) solid;
+        }
+        .btn_add:hover{
+            background-color:rgba(36, 255, 36, 0.678);
+            border-color:black;
+            cursor: pointer;
+        }
+        .btn_del{
+            width: 15%;
+            height: 30px;
+            background-color:rgb(206, 25, 25);
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            margin:10px;
+            border-radius:20px;
+            border: 1px rgb(235, 8, 8) solid;
+        }
+        .btn_del:hover{
+            background-color:rgba(206, 25, 25, 0.596);
+            border-color:black;
+            cursor: pointer;
+        }
+
+    }
+    .todo{
+        list-style: none;
+        width: 60%;
+        height: 50px;
+        margin: 5px auto;
+        align-items: center;
+        justify-content:space-around;
+        display: flex;
+        font-size: 2em;
+        background:linear-gradient(to left, #00e0fd, #15ff00);
+        border-radius: 20px;
+    }
+    .btn_task{
+        display: flex;
+        justify-content:center;
+    }
+    .del_task{
+        background-color: red;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        margin-left: 10px;
+        color: white;
+        display: flex;
+        justify-content:center;
+        border:red 1px solid;
+    }
+    .del_task:hover{
+        color: red;
+        background-color: white;
+        cursor: pointer;
+    }
+    .val_task{
+        background-color: green;
+        width: 40px;
+        height: 40px;
+        border-radius: 10px;
+        color: white;
+        display: flex;
+        justify-content:center;
+        border:green 1px solid;
+    }
+    .val_task:hover{
+        color: green;
+        background-color: white;
+        cursor: pointer;
+    }
+    
+
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- ./assets/libs/dart-sass/sass ./assets/scss/style.scss ./assets/css/style.css --watch -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <script src="assets/js/script.js" defer></script>
+
+    <title>Todo list</title>
+</head>
+<body>
+<header>
+    <div class="navbar">    
+        <div><a href="index.html">Home</a></div>
+        <div class="active"><a class="active" href="todolist.html"> Todo list</a></div>
+        <div>Projet 2</div>
+        <div>Projet 3</div>
+    </div>
+</header>
+<section>
+    <div class="todoList">
+        <h1>Ma Todo List</h1>
+        <form action="todoList">
+            <div class="div_Task">
+                <input type="text" name="task" id="task" placeholder="Votre tâche" required>
+            </div>    
+            <div class="btn">
+                <div class="btn_add">Ajouter</div>
+                <div class="btn_del">Tous supprimer</div>
+            </div>      
+        </form>
+        <div id="listContainer" class="Todolist">
+        </div>
+    </div>
+
+</section>
+</body>
+</html>
