@@ -108,6 +108,20 @@
         background-color: white;
         cursor: pointer;
     }
+    .valide{
+        list-style: none;
+        width: 60%;
+        height: 50px;
+        margin: 5px auto;
+        align-items: center;
+        justify-content:space-around;
+        display: flex;
+        font-size: 2em;
+        background-color:gold;
+        color: yellow;
+
+        border-radius: 20px;
+    }
     
 
 }

@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "slick";
+    text-decoration: none;
+    color: black;
+    list-style: none;
+    overflow-x: hidden;
+  }
+  
+  header {
+    height: 100px;
+    width: 100%;
+    background-color: white;
+    position: relative;
+  }
+  header .navbar {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  header .navbar div {
+    text-align: center;
+    padding: 40px 20px 40px 20px;
+    text-decoration: none;
+    font-size: 14px;
+    border: #cacaca 1px solid;
+  }
+  header .navbar div:hover {
+    background-color: #a8050e;
+    border-color: #a8050e;
+    color: white;
+    cursor: pointer;
+  }
+  header .navbar .active {
+    background-color: #a8050e;
+    border-color: #a8050e;
+    color: white;
+  }
+  .container{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+}
+/* TEMPLATE DE LA SECTION CENTRALE TODO */
+
+#color-input{
+    margin:1rem;
+    height:2rem;
+    background-color:var(--bg-secondary);
+    color:var(--text-secondary);
+    font-size:1.5rem;
+    font-family:'Open Sans',sans-serif;
+    text-align:center;
+}
+
+#color-button{
+    padding:1rem;
+    height:3rem;
+    background-color:blue;
+    color:var(--text-primary);
+}

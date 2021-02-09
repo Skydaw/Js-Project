@@ -1,9 +1,11 @@
 const task =document.querySelector('#task')
-const todoList = document.querySelector('.Todolist')
+const todoList =document.querySelector('.Todolist')
 const btn_add=document.querySelector('.btn_add')
+const btn_del=document.querySelector('.btn_del')
 
 
 
+<<<<<<< HEAD
 // todoList.addEventListener('click',createEventDel)
 
 // function createEventDel(){
@@ -14,13 +16,25 @@ const btn_add=document.querySelector('.btn_add')
 //     })
 // }
 
+=======
+todoList.addEventListener('click',(e)=>{
+    const button=e.target
+    if (button.classList.contains('del_task')){
+        button.parentNode.parentNode.remove();
+    }
+    if (button.classList.contains('val_task')){
+        button.parentNode.parentNode.className = 'valide'
+        button.remove();
+    }
+})
+>>>>>>> 807012545e1fa26b2789766c0c006efeb41f69fb
 btn_add.addEventListener('click',(e)=>{
     if (task.value==''){
         window.alert(`vous n'avez pas rempli le champs obligatoires`)
     }
     else{
     e.preventDefault();
-    const todo =document.createElement(`div`);
+    const todo =document.createElement(`li`);
 
     const btn_task=document.createElement('div');
     const todoTask = document.createElement('div');   
@@ -41,6 +55,10 @@ btn_add.addEventListener('click',(e)=>{
     const val_task=document.createElement('div');
     val_task.className='val_task';
     val_task.textContent='V';
+<<<<<<< HEAD
+=======
+    
+>>>>>>> 807012545e1fa26b2789766c0c006efeb41f69fb
     todoList.appendChild(todo);
     todo.appendChild(todoTask);
     todo.appendChild(btn_task);
@@ -49,9 +67,15 @@ btn_add.addEventListener('click',(e)=>{
     // task.value='';
     }  
 });
+<<<<<<< HEAD
 
 
 
 
+=======
+>>>>>>> 807012545e1fa26b2789766c0c006efeb41f69fb
 
 
+btn_del.addEventListener('click',(e)=>{
+    todoList.innerHTML='';
+})
