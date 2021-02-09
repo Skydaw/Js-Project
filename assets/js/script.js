@@ -44,7 +44,7 @@ btn_add.addEventListener('click',(e)=>{
     todo.appendChild(btn_task);
     btn_task.appendChild(val_task);
     btn_task.appendChild(del_task);
-    // task.value='';
+    task.value='';
     }  
 });
 
