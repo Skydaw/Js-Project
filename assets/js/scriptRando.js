@@ -1,38 +1,26 @@
 // Initialisation de nos sélecteurs
 const randomColor = document.querySelector('#color-button');
-const bgColor = document.querySelector('main');
-const inputColor = document.querySelector('#color-input')
+const bgColor = document.querySelector('.container');
+const inputColor = document.querySelector('#color-input');
+const colorInput = document.querySelector('#color')
+
 
 const hexArray = [0,1,2,3,4,5,6,7,8,9,"A","B","C","D","E","F"];
 
+
+// boutton randomizer coleur
 randomColor.addEventListener('click', (e) => {
     const colorPicked = [];
-    const btnColorPicked=[];
-    
     for(let i = 0; i<6; i++){
         let pickColor = hexArray[Math.floor(Math.random()*hexArray.length)];
         colorPicked.push(pickColor);
     }
-    for(let i = 0; i<6; i++){
-        let pickColor = hexArray[Math.floor(Math.random()*hexArray.length)];
-        btnColorPicked.push(pickColor);
-    }
-
-    colorHex = `#${colorPicked.join('')}`;
-    btnHex  = `#${btnColorPicked.join('')}`;
-
-    bgColor.style.backgroundColor = colorHex;
-    randomColor.style.backgroundColor = btnHex;
+    colorHex = `${colorPicked.join('')}`;
+    bgColor.style.backgroundColor = `#${colorHex}`;
+    inputColor.value= `${colorHex}`
 });
 
-
-// inputColor.addEventListener('keyup',(e)=>{
-//     const userInput = inputColor.value;
-//     if(userInput.length===3||userInput.length===6){
-//         console.log("yop")
-//         bgColor.style.background = `#${userInput}`
-//     }
-// })
+// champs pour entrer la valeur hexadecimale
 inputColor.addEventListener('keyup',(e)=>{
     const userInput = inputColor.value
     if( userInput.length === 6){
@@ -41,6 +29,15 @@ inputColor.addEventListener('keyup',(e)=>{
     }else{
         inputColor.style.border=`2px solid red`;
     }
+})
+// choix de la couleur
+colorInput.addEventListener('input',()=>{
+    const color =colorInput.value
+    const out =color.substring(1,color.length)
+    inputColor.value= out
+    bgColor.style.backgroundColor= color
+
+
 })
 
 

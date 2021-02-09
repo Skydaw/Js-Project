@@ -4,26 +4,32 @@
     <!-- ./assets/libs/dart-sass/sass ./assets/scss/style.scss ./assets/css/style.css --watch -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="assets/css/stylerando.css">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/scriptRando.js" defer></script>
 
     <title>Projet JS</title>
 </head>
-<body class='body_rando'>
+<body>
 <header>
-    <div class="navbar">    
-        <div><a href="index.html">Home</a></div>
-        <div><a href="todolist.html"> Todo list</a></div>
-        <div class="active"><a href="Rando.html">Randomizer</a></div>
-        <div>Projet 3</div>
-    </div>
+    <div class="menu">
+        <div class="label">Menu</div>
+        <div class="spacer"></div>
+        <div class="item"><a href="todolist.html">Todo List</a></div>
+        <div class="item"><a href="rando.html">Color Randomizer</a></div>
+        <div class="item"><a href="">Prochain projet</a></div>
+        <div class="item"><a href="">Prochain projet</a></div>
+        <div class="item"><a href="">Prochain projet</a></div>
+      </div>
 </header>
-<main>
-    <h1>Color picker/randomizer</h1>
     <section class="container">
-        <input type="text" name="colorInput" id="color-input" placeholder="#">
-        <div id="color-button">Randomize me !</div>
+        <div class="little_container">
+            <h1>Color picker/randomizer</h1>
+            <input type="color" id="color">
+            <input type="text" name="colorInput" id="color-input" placeholder="#">
+
+            <div id="color-button">Randomize me !</div>
+        </div>
     </section>
-</main>
 </body>
 </html>

@@ -4,6 +4,7 @@
     <!-- ./assets/libs/dart-sass/sass ./assets/scss/style.scss ./assets/css/style.css --watch -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://kit.fontawesome.com/e0136d50f1.js" defer rossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
     <script src="assets/js/script.js" defer></script>
 
@@ -11,19 +12,23 @@
 </head>
 <body>
 <header>
-    <div class="navbar">    
-        <div><a href="index.html">Home</a></div>
-        <div class="active"><a class="active" href="todolist.html"> Todo list</a></div>
-        <div><a href="Rando.html">Randomizer</a></div>
-        <div>Projet 3</div>
-    </div>
+    <div class="menu">
+        <div class="label">Menu</div>
+        <div class="spacer"></div>
+        <div class="item"><a href="todolist.html">Todo List</a></div>
+        <div class="item"><a href="rando.html">Color Randomizer</a></div>
+        <div class="item"><a href="">Prochain projet</a></div>
+        <div class="item"><a href="">Prochain projet</a></div>
+        <div class="item"><a href="">Prochain projet</a></div>
+      </div>
 </header>
 <section>
     <div class="todoList">
         <h1>Ma Todo List</h1>
+
         <form action="todoList">
             <div class="div_Task">
-                <input type="text" name="task" id="task" placeholder="Votre tâche" required>
+                <input type="text" name="task" id="task" placeholder="Votre tâche">
             </div>    
             <div class="btn">
                 <div class="btn_add">Ajouter</div>

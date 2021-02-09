@@ -5,18 +5,6 @@ const btn_del=document.querySelector('.btn_del')
 
 
 
-<<<<<<< HEAD
-// todoList.addEventListener('click',createEventDel)
-
-// function createEventDel(){
-//     const btn_del=document.querySelector('.del_task');
-
-//     btn_del.addEventListener('click',function(e){
-
-//     })
-// }
-
-=======
 todoList.addEventListener('click',(e)=>{
     const button=e.target
     if (button.classList.contains('del_task')){
@@ -27,7 +15,6 @@ todoList.addEventListener('click',(e)=>{
         button.remove();
     }
 })
->>>>>>> 807012545e1fa26b2789766c0c006efeb41f69fb
 btn_add.addEventListener('click',(e)=>{
     if (task.value==''){
         window.alert(`vous n'avez pas rempli le champs obligatoires`)
@@ -55,25 +42,15 @@ btn_add.addEventListener('click',(e)=>{
     const val_task=document.createElement('div');
     val_task.className='val_task';
     val_task.textContent='V';
-<<<<<<< HEAD
-=======
     
->>>>>>> 807012545e1fa26b2789766c0c006efeb41f69fb
     todoList.appendChild(todo);
     todo.appendChild(todoTask);
     todo.appendChild(btn_task);
     btn_task.appendChild(val_task);
     btn_task.appendChild(del_task);
-    // task.value='';
+    task.value='';
     }  
 });
-<<<<<<< HEAD
-
-
-
-
-=======
->>>>>>> 807012545e1fa26b2789766c0c006efeb41f69fb
 
 
 btn_del.addEventListener('click',(e)=>{
