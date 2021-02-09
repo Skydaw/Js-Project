@@ -1,25 +1,27 @@
 const task =document.querySelector('#task')
-const todoList = document.querySelector('.Todolist')
+const todoList =document.querySelector('.Todolist')
 const btn_add=document.querySelector('.btn_add')
+const btn_del=document.querySelector('.btn_del')
 
 
 
-todoList.addEventListener('click',del)
-const todo=document.querySelector('.todo')
-
-
-
-
-
-
-
+todoList.addEventListener('click',(e)=>{
+    const button=e.target
+    if (button.classList.contains('del_task')){
+        button.parentNode.parentNode.remove();
+    }
+    if (button.classList.contains('val_task')){
+        button.parentNode.parentNode.className = 'valide'
+        button.remove();
+    }
+})
 btn_add.addEventListener('click',(e)=>{
     if (task.value==''){
         window.alert(`vous n'avez pas rempli le champs obligatoires`)
     }
     else{
     e.preventDefault();
-    const todo =document.createElement(`div`);
+    const todo =document.createElement(`ul`);
 
     const btn_task=document.createElement('div');
     const todoTask = document.createElement('div');   
@@ -36,27 +38,17 @@ btn_add.addEventListener('click',(e)=>{
     const val_task=document.createElement('div');
     val_task.className='val_task';
     val_task.textContent='V';
-
-    listContainer.parentNode.insertBefore(todo,todoList.nextSibling);
+    
+    todoList.appendChild(todo);
     todo.appendChild(todoTask);
     todo.appendChild(btn_task);
     btn_task.appendChild(val_task);
     btn_task.appendChild(del_task);
-    task.value='';
+    // task.value='';
     }  
 });
-function del(){
-    console.log('yop')
-    if (item.classList[0]=== 'del_task'){
-        console.log('yo')
-    }
-    
 
 
-
-}
-
-
-
-
-
+btn_del.addEventListener('click',(e)=>{
+    todoList.innerHTML='';
+})
