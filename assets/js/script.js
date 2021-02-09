@@ -21,7 +21,7 @@ btn_add.addEventListener('click',(e)=>{
     }
     else{
     e.preventDefault();
-    const todo =document.createElement(`ul`);
+    const todo =document.createElement(`li`);
 
     const btn_task=document.createElement('div');
     const todoTask = document.createElement('div');   
