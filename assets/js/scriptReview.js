@@ -52,6 +52,7 @@ window.addEventListener("DOMContentLoaded",()=>{
     author.innerText = review.name.toUpperCase(0);
     job.innerText = review.job;
     text.innerText = review.text;
+    timer();
 })
 
 // Fonction changement de commentaire
@@ -67,7 +68,6 @@ function showPerson(person){
 // Fonction next personne pour boutton et automatique
 function nextPerson(){
     const longueur=reviews.length -1;
-    console.log(longueur);
     currentReview++;
     if(currentReview<=longueur){
         showPerson(currentReview)
@@ -84,18 +84,23 @@ function nextPerson(){
   const before = document.querySelector('.btn_before')
   const random = document.querySelector('.btn_random')
 
-
-  
-//Event boutton next
-  next.addEventListener("click",()=>{
-    nextPerson()
-  })
   //Defilement automatique
-  window.setInterval(nextPerson,8000)
+  function timer(){
+  window.setInterval(nextPerson,10000)
+  }
+//Event boutton next
+
+  next.addEventListener("click",()=>{
+    clearInterval(timer);
+    nextPerson();
+  })
+
 
 //Event boutton before
   before.addEventListener("click",()=>{
     const longueur=reviews.length -1;
+    clearInterval(timer);
+
     currentReview--;
     if(currentReview>=0){
         showPerson(currentReview)
@@ -108,7 +113,7 @@ function nextPerson(){
   
 //Event boutton radom
   random.addEventListener("click",()=>{
-      console.log('yop')
+    clearInterval(timer);
       let currentRandom= Math.floor(Math.random()*reviews.length)
       while(currentRandom==currentReview){
         currentRandom= Math.floor(Math.random()*reviews.length)
