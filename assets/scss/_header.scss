@@ -46,9 +46,19 @@ a {
   transition: all 0.5s ease;
 }
 
-.item:hover a {
-  color: #ff0000;
+.item:hover:not(.selected) {
   background-color: rgba(145, 145, 145, 0.26);
+  a{
+    color: #ff0000;
+  }
+}
+.menu >.selected{
+  background-color: rgba(145, 145, 145, 0.26);
+  a{
+    color: #ff0000;
+    background-color: none;
+  }
+
 }
 .menu:hover .spacer:before {
   width: 100%;
